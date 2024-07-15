@@ -1,0 +1,11 @@
+.table-main-container {
+    /* 보더 표시 안해서 안보임 */
+    /* flex: 자식들을 칼럼 방향으로 배치 하겠다 */
+    display: flex;
+    /* colum: 세로로 */
+    flex-direction: column;
+    /* 부모(제일 밖 div)에 있는 공간 중 빈공간 다 차지하겠다 */
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 20px;
+}

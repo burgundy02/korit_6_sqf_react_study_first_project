@@ -1,0 +1,23 @@
+/* 제일 밖 div */
+.container {
+    /* flex: 주축, 교차축, 자식들을 어떻게 배치 할 것인지 */
+    display: flex;
+    /* 자식들을 row가 아닌colom 방향으로 배치하겠다 */
+    flex-direction: column;
+    box-sizing: border-box;
+    /* 위 아래 30, 좌우 오토 -> 가운데 정렬 */
+    margin: 30px auto;
+    border: 1px solid #dbdbdb;
+    padding: 5px;
+    width: 1400px;
+    height: 800px;
+
+}
+
+/* 컨테이너 자식 h1 */
+.container > h1 {
+    /* 10 30 15 30 */
+    margin: 10px 30px 15px;
+    /* default 안하면 글자 닿이면 I모양으로 바뀜 */
+    cursor: default;
+}

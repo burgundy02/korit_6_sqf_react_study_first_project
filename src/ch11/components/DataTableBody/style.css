@@ -1,0 +1,61 @@
+.table-body {
+    /* 포지션 relative: 부모 안에서 자식을 움직이게 하겠다 */
+    position: relative;
+    /* 부모의 빈 공간을 지가 다 차지하겠다 -> 안보이는 부모 div의 DataTableHeader가 차지하지 않은 나머지 부분을 다 차지하겠다 */
+    flex-grow: 1;
+    box-sizing: border-box;
+    border: 1px solid #dbdbdb;
+    margin-top: 10px;
+    height: 400px;
+    /* y축에 스크롤바: auto(스크롤바가 필요할 때 나타남) */
+    overflow-y: auto;
+}
+
+/* thead, tbody가 들어있는 table */
+.table-body table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-body table thead{
+    /* sticky: 이거 한 th만 스크롤 할 때 안 올라가고 위에 고정 돼 있음 */
+    position: sticky;
+    /* 부모한테 relative해야 부모한테서 top 0으로 sticky한 상태로 붙어 있을 수 있다 */
+    top: 0px;
+    background-color: #fafafa;
+}
+
+/* th(한 칸): 굵고, 가운데 
+   td(한 칸): 얇고, 왼쪽부터 정렬 */
+.table-body table th,
+.table-body table td {
+    border: 1px solid #dbdbdb;
+    height: 30px;
+}
+
+/* 테이블의 맨 위에만 지정해줘도 밑에 얘들이 알아서 따라감(그래서 thead의 th 넓이만 지정해둬도 밑에서 알아서 따라감) */
+.table-body table thead th { 
+    &:nth-of-type(1) {
+        width: 3%;
+    }
+    height: 30px;
+    &:nth-of-type(2) {
+        width: 15%;
+    }
+    height: 30px;
+    &:nth-of-type(3) {
+        width: 42%;
+    }
+    height: 30px;
+    &:nth-of-type(4) {
+        width: 10%;
+    }
+    height: 30px;
+    &:nth-of-type(5) {
+        width: 15%;
+    }
+    height: 30px;
+    &:nth-of-type(6) {
+        width: 15%;
+    }
+}
